@@ -1,0 +1,82 @@
+#greating{
+}
+
+
+#greating{
+    padding: 4%;
+    /* height: 120vh; */
+    /* width: 100%; */
+    background-color: #EAF4FD;
+
+    }
+    #h2{
+    font-size: 270%;
+    color: rgba(0, 0, 0, 0.747);
+
+    }
+
+    #admision{
+    color: white;
+    border-radius: 5px;
+    padding: 15px 30px;
+    background-color: #5D5D5D;
+    border: none;
+    margin-top: 5% 0px 0px 0px ;
+
+    }
+
+    #p1{
+        color: black;
+        font-size: medium;
+    }
+    #ps{
+    width: 50%;
+margin-right: 3%;
+    }
+    #bothssss{
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+    #simage{
+    position:relative;
+        /* display: flex ; */
+        height: auto;
+        width:100% ;
+        /* width: ; */
+        border-radius: 30px;
+        align-items: center;
+        margin-top: 3%;
+        image-rendering: crisp-edges;
+    }
+
+
+
+#imgdivv{
+
+width: 50%;
+height: 450px;
+
+}
+
+    #awards{
+    margin-top: 0px;
+        font-size: xx-large;
+    }
+    #nav{
+         
+    background-color: #ffffff;
+    display: flex;
+    width: 100%;
+    height: 12vh;
+    align-items: center;
+    justify-content: space-around;
+    }
+    #navv{
+    position:unset;
+    height: 50%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    }

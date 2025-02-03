@@ -1,0 +1,95 @@
+/* Navbar container */
+#dark {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #00000000 !important;
+  }
+
+
+
+
+  .bg-dark{
+    background-color: #00000000  !important; /* Replace #333 with your desired color */
+}
+
+  
+  /* Navbar brand (My School) */
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white !important;
+  }
+  
+  /* Navbar links */
+  .links {
+    color: white !important;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-right: 15px;
+  }
+  
+  .links:hover {
+    color: #ffd700 !important; /* Highlight on hover */
+  }
+  
+  /* ☰ Sidebar Button */
+  #sidebar-button {
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+  }
+  
+  /* Show ☰ button if needed */
+  @media (max-width: 992px) {
+    #sidebar-button {
+      display: block;
+    }
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar .nav-link {
+    font-size: 1.2rem;
+    padding: 10px;
+    color: white;
+  }
+  
+  .sidebar .nav-link:hover {
+    background-color: #ffd700;
+  }
+  

@@ -1,0 +1,148 @@
+/* Full-Screen Slider */
+#activities {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+/* Title */
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Centering Slider */
+.slider-container {
+  width: 10%;
+  height: 100%;
+  max-width: 1500px;
+  /* position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.imgdiv{
+width: 30% !important;
+display: flex;
+justify-content: center;
+border: 10px solid red !important;
+margin-left: 20% !important;
+
+
+
+}
+
+/* Centered Image */
+.slider-image {
+  width: 100%;
+  height: 100%;
+  position: sticky;
+  border: 1px solid red;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom Arrows */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-arrow:hover {
+  background: #6cafcc;
+  color: white;
+}
+
+/* Left Arrow */
+.left {
+  left: 20px;
+}
+
+/* Right Arrow */
+.right {
+  right: 20px;
+}
+
+/* Custom Dots */
+.custom-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.custom-dots li {
+  list-style: none;
+  margin: 0 5px;
+}
+
+.custom-dots .dot {
+  width: 12px;
+  height: 12px;
+  background-color: gray;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+/* Highlight Active Dot */
+.slick-active .dot {
+  background-color: #6cafcc;
+  width: 14px;
+  height: 14px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .slider-container {
+    width: 100%;
+    height: 70%;
+  }
+  .custom-arrow {
+    font-size: 2rem;
+    padding: 8px;
+  }
+  .left {
+    left: 10px;
+  }
+  .right {
+    right: 10px;
+  }
+}
+.slider-container {
+border: 30px solid red !important;
+background-color: red !important;
+margin: 300px !important;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+

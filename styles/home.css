@@ -1,0 +1,145 @@
+css /* Navbar container */
+#dark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #00000000 !important;
+  /* border-bottom: 2px solid #ffffff !important; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapse {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+/* Navbar brand (My School) */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white !important;
+}
+
+/* Center the navbar links */
+.navbar-collapse {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+/* Navbar links */
+.links {
+  color: white !important;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-right: 15px;
+}
+
+.links:hover {
+  color: #ffd700 !important; /* Highlight on hover */
+}
+
+/* ☰ Sidebar Button */
+#sidebar-button {
+  background-color: #ffcc00;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 5px;
+  display: none; /* Hidden by default */
+}
+
+/* Show ☰ button if needed */
+@media (max-width: 992px) {
+  #sidebar-button {
+    display: block;
+  }
+}
+
+/* Sidebar Styling */
+.offcanvas-body .nav-link {
+  font-size: 1.2rem;
+  padding: 10px;
+  color: #000;
+}
+
+.offcanvas-body .nav-link:hover {
+  background-color: #ffd700;
+}
+
+/* Main background settings */
+#main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url('../styles/22.jpg'); /* Background Image */
+  background-size: cover;
+  background-position: center;
+ image-rendering: crisp-edges;
+}
+
+/* Add dark overlay using ::before */
+#main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 50% darker */
+  z-index: 1;
+  image-rendering: crisp-edges;
+  
+}
+
+/* Ensure text & buttons appear above the dark overlay */
+#main > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Contact section */
+#contact {
+  margin: 8% 3%;
+}
+
+#contact h1 {
+  color: white;
+  font-size: 360%; /* Increased by 20% */
+  font-weight: 620;
+}
+
+#contact p {
+  color: white;
+  font-size: 120%; /* Increased by 20% */
+}
+
+/* Admissions button */
+#Admissions {
+  border: none;
+  background-color: #9E5959;
+  border: #565656;
+  border-radius: 7px;
+  text-align: center;
+  padding: 14px 22px; /* Increased by 20% */
+  color: white;
+  font-size: 1.0rem; /* Increased by 20% */
+}
+
+/* Result button */
+#result {
+  border: none;
+  background-color: #9e595900;
+  border: 1px solid white;
+  margin-left: 18px;
+  border-radius: 7px;
+  text-align: center;
+  padding: 12px 22px; /* Increased by 20% */
+  color: white;
+  font-size: 1.0rem; /* Increased by 20% */
+}

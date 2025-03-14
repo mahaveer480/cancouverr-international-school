@@ -1,18 +1,140 @@
-css /* Navbar container */
+/* Navbar Styling */
 #dark {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #00000000 !important;
-  /* border-bottom: 2px solid #ffffff !important; */
-  display: flex;
-  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0) !important; /* Adjusted opacity */
+}
+/* ☰ Sidebar Button */
+#sidebar-button {
+  background-color: #9e5959cb;
+  color: black;
+  border: none;
+  border-radius: 15npm startpx;
+  padding: 8px 12px;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 5px;
+  display: none; /* Hidden by default */
 }
 
-.collapse {
-  display: flex !important;
-  justify-content: space-between !important;
+/* Show ☰ button in mobile view */
+@media (max-width: 992px) {
+  #sidebar-button {
+    display: block;
+  }
+  
+  .navbar-collapse {
+    display: none !important; /* Hide navbar links */
+  }
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: -2px 0px 10px rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar .close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.sidebar .nav-link {
+  font-size: 1.2rem;
+  padding: 10px;
+  color: white;
+  display: block;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #ffd700;
+  color: black;
+}
+
+/* ☰ Sidebar Button */
+#sidebar-button {
+  /* background-color: #ffcc00; */
+  color: white !important;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-right: 15px;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 5px;
+  display: none; /* Hidden by default */
+}
+
+/* Show ☰ button in mobile view */
+@media (max-width: 992px) {
+  #sidebar-button {
+    display: block;
+  }
+  
+  .navbar-collapse {
+    display: none !important; /* Hide navbar links */
+  }
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: -2px 0px 10px rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar .close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.sidebar .nav-link {
+  font-size: 1.2rem;
+  padding: 10px;
+  color: white;
+  display: block;
+  text-align: left;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #ffd700;
+  color: black;
 }
 
 /* Navbar brand (My School) */
@@ -22,7 +144,12 @@ css /* Navbar container */
   color: white !important;
 }
 
-/* Center the navbar links */
+/* Navbar links */
+#white {
+  color: white !important;
+}
+
+/* Center navbar links */
 .navbar-collapse {
   flex-grow: 1;
   justify-content: center;
@@ -41,38 +168,49 @@ css /* Navbar container */
   color: #ffd700 !important; /* Highlight on hover */
 }
 
+
+
+#sidebar-button:hover {
+  color: #ffd700 !important; /* Highlight on hover */
+}
+sidebar-button
 /* ☰ Sidebar Button */
 #sidebar-button {
   background-color: #ffcc00;
   color: black;
   border: none;
-  padding: 8px 12px;
-  font-size: 24px;
+  padding: 10px 15px;
+  font-size: 20px;
   cursor: pointer;
-  margin-left: 10px;
   border-radius: 5px;
   display: none; /* Hidden by default */
 }
 
-/* Show ☰ button if needed */
+/* Show ☰ button on smaller screens */
 @media (max-width: 992px) {
   #sidebar-button {
     display: block;
+  }
+
+  .navbar-collapse {
+    display: none !important; /* Hide the full navbar */
   }
 }
 
 /* Sidebar Styling */
 .offcanvas-body .nav-link {
   font-size: 1.2rem;
-  padding: 10px;
-  color: #000;
+  padding: 12px;
+  color: #fff;
+  text-align: center;
 }
 
 .offcanvas-body .nav-link:hover {
   background-color: #ffd700;
+  color: black !important;
 }
 
-/* Main background settings */
+/* Background Styling */
 #main {
   position: relative;
   height: 100vh;
@@ -80,10 +218,10 @@ css /* Navbar container */
   background-image: url('../styles/22.jpg'); /* Background Image */
   background-size: cover;
   background-position: center;
- image-rendering: crisp-edges;
+  image-rendering: crisp-edges;
 }
 
-/* Add dark overlay using ::before */
+/* Dark Overlay */
 #main::before {
   content: "";
   position: absolute;
@@ -91,55 +229,66 @@ css /* Navbar container */
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* 50% darker */
+  background-color: rgba(0, 0, 0, 0.4); /* Adjusted opacity */
   z-index: 1;
   image-rendering: crisp-edges;
-  
 }
 
-/* Ensure text & buttons appear above the dark overlay */
+/* Ensure text & buttons appear above overlay */
 #main > * {
   position: relative;
   z-index: 2;
 }
 
-/* Contact section */
+/* Contact Section */
 #contact {
   margin: 8% 3%;
+  /* text-align: center; */
 }
 
 #contact h1 {
   color: white;
-  font-size: 360%; /* Increased by 20% */
+  font-size: 50px; /* Increased size */
   font-weight: 620;
 }
 
 #contact p {
   color: white;
-  font-size: 120%; /* Increased by 20% */
+  font-size: 1.2rem; /* Standardized font size */
 }
 
-/* Admissions button */
+/* Buttons */
 #Admissions {
   border: none;
   background-color: #9E5959;
-  border: #565656;
   border-radius: 7px;
   text-align: center;
-  padding: 14px 22px; /* Increased by 20% */
+  padding: 14px 22px;
   color: white;
-  font-size: 1.0rem; /* Increased by 20% */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-/* Result button */
+#Admissions:hover {
+  background-color: #7d3f3f;
+}
+
+/* Result Button */
 #result {
-  border: none;
-  background-color: #9e595900;
   border: 1px solid white;
+  background-color: transparent;
   margin-left: 18px;
   border-radius: 7px;
   text-align: center;
-  padding: 12px 22px; /* Increased by 20% */
+  padding: 12px 22px;
   color: white;
-  font-size: 1.0rem; /* Increased by 20% */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#result:hover {
+  background-color: white;
+  color: black;
 }

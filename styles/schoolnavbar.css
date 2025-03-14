@@ -1,0 +1,21 @@
+.custom-offcanvas .offcanvas-body {
+    background-color: black !important;
+  }
+  
+  .custom-offcanvas .offcanvas-header {
+    background-color: black !important;
+  }
+  
+  .custom-offcanvas-body {
+    background-color: black !important;
+  }
+  
+  .links {
+    color: white !important;
+    text-decoration: none;
+  }
+  
+  .links:hover {
+    color: lightgray !important;
+  }
+  

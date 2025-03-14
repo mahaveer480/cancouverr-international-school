@@ -16,7 +16,7 @@ export const Activites = () => {
 
   return (
     <div className="w-full max-w-3xl mx-auto p-4">
-      <h2 className="text-2xl font-bold mb-4">Activities</h2>
+      <h2 className="">Activities</h2>
       
       <Carousel data-bs-theme="dark" activeIndex={index} onSelect={handleSelect} interval={1000} >
         <Carousel.Item>

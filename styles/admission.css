@@ -1,0 +1,117 @@
+body {
+    background-color: #9e9e9e;
+  }
+  
+  #mainadmission {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Title */
+  #admisionn {
+    font-size: 60px;
+    margin: 20px auto;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Form Sections */
+  #firstinputs, #secondinputs2 {
+    background-color: rgba(0, 0, 0, 0.41);
+    margin: 20px auto;
+    border-radius: 20px;
+    padding: 20px;
+    width: 80%;
+    max-width: 900px;
+  }
+  
+  /* Labels */
+  label {
+    color: white;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Inputs */
+  .roundinput {
+    border: none;
+    border-radius: 50px;
+    height: 63px;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    font-size: 16px;
+  }
+  
+  /* File Inputs */
+  .roundinput-file {
+    background-color: white;
+    border: none;
+    padding: 10px;
+    height: 63px;
+    border-radius: 50px;
+    width: 100%;
+  }
+  
+  /* Parent/Guardian Section */
+  #secondinputs2 h4 {
+    color: white;
+    /* text-align: ; */
+    font-size: 24px;
+    padding: 5px;
+  }
+  
+  /* Textarea */
+  textarea {
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* Submit Button */
+  .apply-button {
+    background-color: #393939;
+    border: none;
+    border-radius: 50px;
+    height: 60px;
+    width: 200px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+.nameee{
+padding-left: 10%;
+
+}
+
+  .apply-button:hover {
+    background-color: #555;
+  }
+  
+  /* Final Message */
+  #mainmessage {
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    margin-top: 30px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #admisionn {
+      font-size: 45px;
+    }
+  
+    #firstinputs, #secondinputs2 {
+      width: 95%;
+    }
+  
+    .apply-button {
+      width: 100%;
+    }
+  }
+  

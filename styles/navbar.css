@@ -1,95 +1,77 @@
-/* Navbar container */
-#dark {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #00000000 !important;
-  }
-
-
-
-
-  .bg-dark{
-    background-color: #00000000  !important; /* Replace #333 with your desired color */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #33333300;
+  padding: 10px 20px;
 }
 
-  
-  /* Navbar brand (My School) */
-  .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white !important;
+.logo {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo h5 {
+  font-size: xx-large;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 400;
+  font-size: large;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    height: calc(100vh - 60px);
+    width: 100%;
+    background-color: #333;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
   }
-  
-  /* Navbar links */
-  .links {
-    color: white !important;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 400;
-    margin-right: 15px;
-  }
-  
-  .links:hover {
-    color: #ffd700 !important; /* Highlight on hover */
-  }
-  
-  /* ☰ Sidebar Button */
-  #sidebar-button {
-    background-color: #ffcc00;
-    color: black;
-    border: none;
-    padding: 8px 12px;
-    font-size: 24px;
-    cursor: pointer;
-    margin-left: 10px;
-    border-radius: 5px;
-    display: none; /* Hidden by default */
-  }
-  
-  /* Show ☰ button if needed */
-  @media (max-width: 992px) {
-    #sidebar-button {
-      display: block;
-    }
-  }
-  
-  /* Sidebar Styling */
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 20px;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .sidebar.open {
+
+  .nav-links.active {
     transform: translateX(0);
   }
-  
-  .close-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    display: block;
-    text-align: right;
-    margin-bottom: 20px;
+
+  .nav-links p {
+    margin: 20px 0;
   }
-  
-  .sidebar .nav-link {
-    font-size: 1.2rem;
-    padding: 10px;
-    color: white;
+
+  .hamburger {
+    display: flex;
   }
-  
-  .sidebar .nav-link:hover {
-    background-color: #ffd700;
-  }
-  
+}

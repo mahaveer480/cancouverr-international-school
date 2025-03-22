@@ -1,0 +1,21 @@
+[debug] [2025-03-14T23:30:09.814Z] ----------------------------------------------------------------------
+[debug] [2025-03-14T23:30:09.819Z] Command:       D:\new thig\node.exe C:\Users\mahaveer ramani\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-03-14T23:30:09.819Z] CLI Version:   13.34.0
+[debug] [2025-03-14T23:30:09.820Z] Platform:      win32
+[debug] [2025-03-14T23:30:09.820Z] Node Version:  v23.6.0
+[debug] [2025-03-14T23:30:09.820Z] Time:          Sat Mar 15 2025 03:30:09 GMT+0400 (GMT+04:00)
+[debug] [2025-03-14T23:30:09.821Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-03-14T23:30:09.834Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-14T23:30:09.835Z] > authorizing via signed-in user (ramanimahaveer4@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\mahaveer ramani\Desktop\School web M\school-website\src
+

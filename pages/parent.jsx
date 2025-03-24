@@ -73,40 +73,30 @@ const Parent = () => {
   return (
     <>
       <SchoolNavbar />
-      <div
-        className="container-fluid bg-light"
-        style={{ height: "100vh", width: "80%", fontWeight: 300 }}
-      >
+      <div className="container-fluid bg-light" style={{ minHeight: "100vh", fontWeight: 300 }}>
         <div className="container mt-4">
-          <div className="d-flex justify-content-between align-items-center my-3">
+          <div className="d-flex flex-wrap justify-content-between align-items-center my-3">
             <div>
               <h5 className="fw-light">Student Details</h5>
               <p className="text-muted">A descriptive body text comes here</p>
             </div>
-            <div className="d-flex gap-2">
+            <div className="d-flex flex-wrap gap-2">
               <input
                 type="text"
                 className="form-control"
+                style={{ minWidth: "200px" }}
                 placeholder="Search by Name or Roll Number"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
-              <DropdownButton
-                align="end"
-                title={selectedClass || "Class"}
-                id="dropdown-menu-align-end"
-              >
-                {["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"].map(
-                  (cls) => (
-                    <Dropdown.Item key={cls} onClick={() => setSelectedClass(cls)}>
-                      {cls}
-                    </Dropdown.Item>
-                  )
-                )}
+              <DropdownButton align="end" title={selectedClass || "Class"} id="dropdown-menu-align-end">
+                {["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"].map((cls) => (
+                  <Dropdown.Item key={cls} onClick={() => setSelectedClass(cls)}>
+                    {cls}
+                  </Dropdown.Item>
+                ))}
                 <Dropdown.Divider />
-                <Dropdown.Item onClick={() => setSelectedClass("")}>
-                  Show All
-                </Dropdown.Item>
+                <Dropdown.Item onClick={() => setSelectedClass("")}>Show All</Dropdown.Item>
               </DropdownButton>
             </div>
           </div>
@@ -116,8 +106,8 @@ const Parent = () => {
           <div className="table-responsive">
             <table className="table table-bordered">
               <thead className="thead-light">
-                <tr className="fw-light text-muted">
-                  <th>SR:NO</th>
+                <tr className="fw-light text-muted text-center">
+                  <th>SR.NO</th>
                   <th>Name &#8595;</th>
                   <th>Father Name &#8595;</th>
                   <th>Roll Number &#8595;</th>
@@ -131,27 +121,21 @@ const Parent = () => {
               <tbody>
                 {filteredStudents.length > 0 ? (
                   filteredStudents.map((student, index) => (
-                    <tr key={student.id} className="fw-light text-muted">
+                    <tr key={student.id} className="fw-light text-muted text-center">
                       <td>{index + 1}</td>
                       <td>{student.name}</td>
                       <td>{student.fatherName}</td>
                       <td>{student.rollNumber}</td>
                       <td>{student.marks}</td>
                       <td>
-                        <span
-                          className={`badge ${
-                            student.status === "pass" ? "bg-success" : "bg-danger"
-                          }`}
-                        >
+                        <span className={`badge ${student.status === "pass" ? "bg-success" : "bg-danger"}`}>
                           {student.status}
                         </span>
                       </td>
                       <td>{student.grade}</td>
                       <td>{student.class || "N/A"}</td>
                       <td>
-                        <button className="btn btn-outline-primary btn-sm">
-                          See more
-                        </button>
+                        <button className="btn btn-outline-primary btn-sm">See more</button>
                       </td>
                     </tr>
                   ))
@@ -172,3 +156,4 @@ const Parent = () => {
 };
 
 export default Parent;
+ 
